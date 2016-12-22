@@ -1,5 +1,13 @@
 # spark-fm
-Factorization Machines is a general predictor like SVMs but is also able to estimate reliable parameters under very high sparsity. However, they are costly to scale to large amounts of data and large numbers of features. spark-fm is a parallel implementation of factorization machines based on Spark. Currently, we support mini-batch stochastic gradient descent and parallel stochastic gradient descent to train the model. More optimization methods like L-BFGS, ALS will be added soon.
+Factorization Machines is a general predictor like SVMs but is also able to estimate reliable parameters under very high sparsity. However, they are costly to scale to large amounts of data and large numbers of features. spark-fm is a parallel implementation of factorization machines based on Spark. It aims to utilize Spark's in-memory computing to address above problems.
+
+# Highlight
+In order to meet users' demands, spark-fm supports various of optimization methods to train the model as follows.
+ + Mini-batch Stochastic Gradient Descent ("gd")
+ + Parallel Stochastic Gradient Descent ("pgd") [[reference]](http://www.research.rutgers.edu/~lihong/pub/Zinkevich11Parallelized.pdf)
+ + L-BFGS ("l-bfgs")
+ + ALS // todo
+ + MCMC // todo
 
 # Examples
 ## Scala API
